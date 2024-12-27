@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./ProductCard.css";
 import axios from "axios";
 const API_URL = "http://localhost:3005/api/products";
+const BASE_URL = "http://localhost:3005"
 
 export const ProductCard = ({ fetchDetails }) => {
   const [products, setProducts] = useState([]);
@@ -28,7 +29,7 @@ export const ProductCard = ({ fetchDetails }) => {
             onClick={() => fetchDetails(data.id)}
           >
             <div className="image">
-              <img src={`${API_URL}/${data.img_path}`} alt="image" />
+              <img src={`${BASE_URL}/${data.img_path}`} alt="image" />
             </div>
             <div className="dicription">
               <h2> {data.title} </h2>

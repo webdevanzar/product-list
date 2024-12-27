@@ -6,6 +6,9 @@ const path = require("path");
 app.use(cors());
 app.use(express.json());
 
+//IMAGE ACCESSING HACK 👇👇
+app.use(express.static('images'))
+
 const products = [
   {
     id: "1",
@@ -49,6 +52,7 @@ const products = [
   },
 ];
 
+
 app.get("/api/products", (req, res) => {
   const { id } = req.query;
   if ("id" in req.query) {
@@ -57,18 +61,21 @@ app.get("/api/products", (req, res) => {
   res.json(products);
 });
 
-app.get("/api/products/:filename", (req, res) => {
-  const filename = req.params.filename;
-  const imagePath = path.join(__dirname, "images", filename);
 
-  // res.json(products)
-  res.sendFile(imagePath, (err) => {
-    if (err) {
-      console.error("Error sending file:", err);
-      res.status(404).send("Image not found");
-    }
-  });
-});
+//OLD METHOD I GUESS 👇👇
+
+// app.get("/api/products/:filename", (req, res) => {
+//   const filename = req.params.filename;
+//   const imagePath = path.join(__dirname, "images", filename);
+
+//   // res.json(products)
+//   res.sendFile(imagePath, (err) => {
+//     if (err) {
+//       console.error("Error sending file:", err);
+//       res.status(404).send("Image not found");
+//     }
+//   });
+// });
 
 const PORT = 3005;
 app.listen(PORT, console.log(`server running on port ${PORT}`));
