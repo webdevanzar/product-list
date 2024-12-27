@@ -1,0 +1,40 @@
+.parent {
+  padding: 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.parent .product-container {
+  margin-right: 10px;
+  margin-top: 30px;
+  width: 20%;
+  box-shadow: 0 0 10px gray;
+  border-radius: 20px;
+}
+
+.parent .product-container .image img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.parent .product-container .dicription {
+  padding: 10px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+p {
+  color: rgb(105, 139, 36);
+  margin-top: 10px;
+}
+
+.parent .product-container .dicription p:last-child {
+  color: blue;
+  font-weight: bold;
+}

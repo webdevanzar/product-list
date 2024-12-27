@@ -1,0 +1,79 @@
+.details-parent {
+  padding: 40px 30px;
+}
+
+.details-parent .details-container {
+  width: 100%;
+  height: calc(100vh - 90px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-parent .details-container .images {
+  width: 50%;
+  height: 100%;
+  margin-right: 25px;
+}
+
+.details-parent .details-container .images a{
+    text-decoration: none;
+    
+}
+
+.details-parent .details-container .images a:hover{
+    color: blue;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+
+.details-parent .details-container .images img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.details-parent .details-container .discription {
+  width: 50%;
+  height: 98%;
+}
+
+.details-parent .details-container .discription h2 {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.details-parent .details-container .discription :nth-child(2) {
+  color: gray;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.details-parent .details-container .discription :nth-child(3) {
+  color: blue;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.details-parent .details-container .discription :nth-child(4) {
+  color: gray;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/*button*/
+.details-parent .details-container .discription :nth-child(5) {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 10px;
+  background-color: blue;
+  border-radius: 7px;
+  padding: 7px 15px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin-top: 15px;
+}
